@@ -1,0 +1,35 @@
+header.contacts-app-header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  background-color: #011627; 
+  font-size: 15px;
+
+  & > * {
+    height: 50px;
+  }
+
+  .logo {
+    margin-left: 20px;
+    align-self: flex-start;
+    font-size: 30px;
+    font-family: Helvetica, sans-serif;
+  }
+
+  .user-info {
+    text-transform: capitalize;
+  }
+
+  .controls {
+    margin: 0 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    .control {
+      margin: 0 10px;
+    }
+  }
+}

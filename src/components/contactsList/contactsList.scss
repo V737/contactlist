@@ -1,0 +1,17 @@
+.contacts-list-container {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  .contacts-list {
+    width: 75%;
+    background-color: white;
+    
+    .contacts-list-title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}

@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import message from 'antd/lib/message'
 
 import UserActions from '../../actions/userActions';
 
+import 'antd/lib/message/style/css';
+
 import './login.scss'
+
+message.config({
+  top: 100
+})
 
 class Login extends Component {
 
@@ -13,7 +20,10 @@ class Login extends Component {
 
   handleSubmit = () => {
     const {username, password} =this.state;
-    UserActions.login(username, password).then(this.props.onSuccess).catch(this.props.onFailure); 
+    UserActions.login(username, password).then(this.props.onSuccess).catch(() => {
+      message.error('Invalid credentials please try again!!!');
+      this.props.onFailure();
+    }); 
   }
 
   handleChange = (stateKey) => {
